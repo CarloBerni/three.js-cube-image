@@ -3,7 +3,7 @@ var scene = new THREE.Scene();
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
-    /*camera.position.set(0,0,20);*/
+    camera.position.set(0,0,20);
 
 
 // responsive 
@@ -19,30 +19,27 @@ window.addEventListener( 'resize', function ( ) {
 
 // orbit
 
-controls = new THREE.OrbitControls( camera, renderer.domElement );
+var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 
 // create the cube
 
-var geometry = new THREE.boxGeometry( 1, 1, 1);
+var cubeGeometry = new THREE.CubeGeometry( 1, 1, 1);
 
 
-var material = new THREE.MeshBasicMaterial( { color: 0xFFFFFF, wireframe: ture});
-var cube = new THREE.Mesh( geometry, material);
+var cubeMaterial = new THREE.MeshBasicMaterial( { color: 0xFF0FAA, wireframe: false });
+var cube = new THREE.Mesh( cubeGeometry, cubeMaterial );
 scene.add(cube);
 
-var update = function() {
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.005;
-};
+camera.position.z = 3;
+
 
 
 var render = function() {
   renderer.render( scene, camera );
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.005;
+  requestAnimationFrame(render);
 };
 
-var Gameloop = function ( ) {
-  requestAnimationFrame( Gameloop );
-  update();
-  render();
-};
+render();
