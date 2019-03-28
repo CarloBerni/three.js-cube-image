@@ -72,12 +72,12 @@ var cubeMaterials = [
 
 var cubeMaterial = new THREE.MeshFaceMaterial(cubeMaterials);
 var cube = new THREE.Mesh(geometry, cubeMaterial);
-cube.position.x = 1;
-cube.position.y = 1;
+cube.position.x = 0;
+cube.position.y = 0;
 cube.position.z = 1;
 scene.add(cube);
 
-camera.position.z = 3;
+camera.position.z = 5;
 
 
 
