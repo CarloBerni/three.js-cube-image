@@ -44,27 +44,27 @@ var orbit = new THREE.OrbitControls(camera, renderer.domElement);
 var geometry = new THREE.CubeGeometry(2, 2, 2);
 var cubeMaterials = [
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/canonWork.png'),
+    map: new THREE.TextureLoader().load('/textures/canonWorkInverse.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/carlo13-min.png'),
+    map: new THREE.TextureLoader().load('/textures/carlo13-minInverse.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/socomptoirWork.png'),
+    map: new THREE.TextureLoader().load('/textures/socomptoirWorkInverse.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/ToTheTopWork.png'),
+    map: new THREE.TextureLoader().load('/textures/ToTheTopWorkInverse.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/canonWork.png'),
+    map: new THREE.TextureLoader().load('/textures/canonWorkInverse.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/carlo13-min.png'),
+    map: new THREE.TextureLoader().load('/textures/carlo13-minInverse.png'),
     side: THREE.DoubleSide
   })
 ];
