@@ -13,6 +13,7 @@
 })()
 
 var scene = new THREE.Scene();
+scene.background = new THREE.Color( 0xffffff );
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({
   antialias: true
@@ -43,27 +44,27 @@ var orbit = new THREE.OrbitControls(camera, renderer.domElement);
 var geometry = new THREE.CubeGeometry(2, 2, 2);
 var cubeMaterials = [
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/canonWork.jpeg'),
+    map: new THREE.TextureLoader().load('/textures/canonWork.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/carlo13-min.jpeg'),
+    map: new THREE.TextureLoader().load('/textures/carlo13-min.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/socomptoirWork.jpeg'),
+    map: new THREE.TextureLoader().load('/textures/socomptoirWork.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/ToTheTopWork.jpeg'),
+    map: new THREE.TextureLoader().load('/textures/ToTheTopWork.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/socomptoirWork.jpeg'),
+    map: new THREE.TextureLoader().load('/textures/canonWork.png'),
     side: THREE.DoubleSide
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load('/textures/carlo13-min.jpeg'),
+    map: new THREE.TextureLoader().load('/textures/carlo13-min.png'),
     side: THREE.DoubleSide
   })
 ];
@@ -84,6 +85,7 @@ camera.position.z = 5;
 var render = function () {
   renderer.render(scene, camera);
   cube.rotation.x += 0.005;
+  cube.rotation.y += 0.005;
   requestAnimationFrame(render);
 };
 
